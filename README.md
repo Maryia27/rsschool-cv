@@ -1,5 +1,5 @@
 # rsschool-cv
-Maria Pavlyutkina
+# Maria Pavlyutkina
 Contact Information:
 Phone: +375 296457377
 
