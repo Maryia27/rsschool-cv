@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ff4646;
-    color: white;
 }
 
 header {
@@ -72,38 +71,39 @@ nav a {
 .ornament {
     text-align: center;
     padding: 100px 20px;
-    position: relative; /* Устанавливаем контейнер как относительный */
-    background: none; /* Убираем фон, если ранее был указан */
+    position: relative;
+    background: none;
 }
 
 .background-image1 {
-    position: absolute; /* Фиксируем изображение в контейнере */
-    top: 50%; /* Центруем изображение по вертикали */
-    left: 50%; /* Центруем изображение по горизонтали */
-    transform: translate(-50%, -50%); /* Смещаем изображение для абсолютного центрирования */
-    width: 80%; /* Настраиваем ширину */
-    height: auto; /* Сохраняем пропорции изображения */
-    z-index: -1; /* Отправляем изображение на задний план */
-    opacity: 0.8; /* Опционально, делаем его чуть прозрачным */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    z-index: -1;
+    opacity: 0.8;
 }
+
 .photo {
- position: relative; /* Фиксируем изображение в контейнере */
-    top: 40%; /* Центруем изображение по вертикали */
-    left: 40%; /* Центруем изображение по горизонтали */
-    transform: translate(-50%, -50%); /* Смещаем изображение для абсолютного центрирования */
-    width: 80%; /* Настраиваем ширину */
-    height: auto; /* Сохраняем пропорции изображения */
-    z-index: -1; /* Отправляем изображение на задний план */
-    opacity: 0.8; /* Опционально, делаем его чуть прозрачным */
+    position: relative;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    z-index: -1;
+    opacity: 0.8;
 }
+
 .holiday-message,
 .main-heading,
 .new-year-message,
 .explore-button {
-    position: relative; /* Указываем, что текст должен быть над изображением */
-    z-index: 1; /* Устанавливаем текст выше изображения */
+    position: relative;
+    z-index: 1;
 }
-
 
 .new-year-message {
     font-family: 'Brush Script MT', cursive;
@@ -195,104 +195,91 @@ nav a {
     z-index: 1;
 }
 
-/* Общий стиль для секции */
 .gift-section {
-    width: 100%; /* Ширина секции на весь экран */
-    max-width: 1200px; /* Максимальная ширина секции */
-    margin: 0 auto; /* Центрируем секцию */
-    padding: 20px; /* Отступы сверху и снизу */
-    box-sizing: border-box; /* Учитываем отступы в ширине */
-    text-align: center; /* Центрируем текст внутри */
-}
-
-/* Заголовки внутри секции */
-.gift-section h2,
-.gift-section h3 {
-    margin: 10px 0;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Обертка для карточек */
-.cards-wrapper {
-    display: flex; /* Используем флексбокс для выравнивания */
-    flex-wrap: wrap; /* Карточки переносятся на новую строку, если не помещаются */
-    justify-content: space-between; /* Равномерное распределение карточек */
-    gap: 20px; /* Пространство между карточками */
-    margin-top: 20px;
-}
-
-/* Стиль для карточки */
-.card {
-    flex: 1 1 calc(25% - 20px); /* Каждая карточка занимает 25% ширины минус отступ */
-    max-width: calc(25% - 20px); /* Для ограничения ширины */
-    background: #f8f8f8; /* Серо-белый фон для карточки */
-    padding: 20px; /* Внутренние отступы */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
-    border-radius: 10px; /* Скругленные углы */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     box-sizing: border-box;
     text-align: center;
 }
 
-/* Контейнер для изображения */
+.gift-section h2,
+.gift-section h3 {
+    margin: 10px 0;
+    font-family: 'Brush Script MT', cursive;
+    color: white;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    background: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 .image-container {
     width: 100%;
-    background: #e0e0e0; /* Серо-белый фон за изображением */
-
-
+    background: #e0e0e0;
 }
 
-/* Стили для изображения */
 .image-container img {
-    width: 100%; /* Изображение растягивается на всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
+    width: 100%;
+    height: auto;
     display: block;
-    border-radius: 8px; /* Немного скругляем изображение */
+    border-radius: 8px;
 }
 
-/* Категории */
-/* Общий стиль для категорий */
 .category {
     margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 5px 10px; /* Отступы внутри текста */
-    border-radius: 5px; /* Скругленные края фона */
-    display: inline-block; /* Чтобы фон подстраивался под размер текста */
-    color: #fff; /* Белый текст */
-    text-align:left;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #fff;
+    text-align: left;
 }
 
-/* Цвета для каждой категории */
 .category.for-work {
-    color: #007BFF; /* Синий */
-    text-align:left;
+    color: #007BFF;
+    text-align: left;
 }
 
 .category.for-health {
-    color: #28A745; /* Зеленый */
-    text-align:left;
+    color: #28A745;
+    text-align: left;
 }
 
 .category.for-harmony {
-    color: #Ffc0cb; /* Желтый */
-    text-align:left;
+    color: #Ffc0cb;
+    text-align: left;
 }
 
-
-/* Заголовки карточек */
 .card h4 {
     margin: 10px 0 0;
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    text-align:left;
+    text-align: left;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-
     color: white;
     font-size: 14px;
 }
@@ -300,27 +287,19 @@ footer {
 .countdown-wrapper {
     text-align: center;
     padding: 40px 20px;
-
     border-radius: 15px;
     margin: 40px auto;
     max-width: 900px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    color: white;  /* Белый текст для всего блока */
+    color: white;
 }
 
 .countdown-section {
     font-family: 'Arial', sans-serif;
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 20px;
-}
-
 .cta-button {
-    background-color: #000;  /* Черная кнопка */
+    background-color: #000;
     color: white;
     font-size: 18px;
     padding: 12px 20px;
@@ -331,7 +310,7 @@ h1 {
 }
 
 .cta-button:hover {
-    background-color: #333;  /* Темный оттенок при наведении */
+    background-color: #333;
 }
 
 .subheading {
@@ -348,7 +327,7 @@ h1 {
 }
 
 .time-box {
-    background-color: rgba(255, 255, 255, 0.3);  /* Полупрозрачный фон */
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -375,14 +354,119 @@ h1 {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
 }
-.contact-container {
 
-display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-.contact-card { display: flex; flex-direction: column; align-items: center; padding: 80px; background-color: #e0f7fa; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; width: 300px; height:70px }
-.contact-image { width: 100px; height: 100px; margin-bottom: 10px; margin-top:-50px; }
-.contact-card h2 { margin: 10px 0; font-size: 18px; color:black; }
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    height: 70px;
+}
+
+.contact-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-top: -50px;
+}
+
+.contact-card h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: black;
+}
+
 .contact-card p {
-margin: 5px 0;
- font-size: 14px;
-color: black;
+    margin: 5px 0;
+    font-size: 14px;
+    color: black;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+
+/* Большие экраны */
+@media (max-width: 1440px) {
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+/* Средние экраны (планшеты) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Маленькие экраны (мобильные устройства) */
+@media (max-width: 480px) {
+    .image-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons button {
+        margin: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

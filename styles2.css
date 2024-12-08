@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+header {
+    background: #ff6f61;
+    color: white;
+    padding: 20px 0;
+}
+
+.header-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filter-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gift-item {
+    text-align: center;
+}
+
+.gift-item img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.category {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.work {
+    color: #3498db;
+}
+
+.health {
+    color: #2ecc71;
+}
+
+.harmony {
+    color: #f39c12;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff6f61;
+    color: white;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+
+/* Большие экраны */
+@media (max-width: 1440px) {
+    .image-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Средние экраны (планшеты) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Маленькие экраны (мобильные устройства) */
+@media (max-width: 380px) {
+    .image-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons button {
+        margin: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+}
