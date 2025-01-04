@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ff4646;
+    background-color: #ff4646; /* Красный фон */
+    transition: background-color 0.3s ease;
 }
 
 header {
@@ -11,12 +12,14 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #ffffff;
+    transition: padding 0.3s ease;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: black;
+    transition: color 0.3s ease;
 }
 
 nav ul {
@@ -31,6 +34,11 @@ nav a {
     color: black;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff5e5e;
 }
 
 .hero {
@@ -39,6 +47,7 @@ nav a {
     position: relative;
     background: url('ornament.png') no-repeat center;
     background-size: contain;
+    transition: transform 0.3s ease;
 }
 
 .holiday-message {
@@ -46,6 +55,7 @@ nav a {
     font-size: 24px;
     color: white;
     margin: 10px 0;
+    transition: transform 0.3s ease;
 }
 
 .main-heading {
@@ -53,6 +63,7 @@ nav a {
     margin: 20px 0;
     z-index: 1;
     color: white;
+    transition: opacity 0.3s ease;
 }
 
 .explore-button {
@@ -66,6 +77,11 @@ nav a {
     cursor: pointer;
     margin: 20px 0;
     border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #ff5e5e;
 }
 
 .ornament {
@@ -73,6 +89,7 @@ nav a {
     padding: 100px 20px;
     position: relative;
     background: none;
+    transition: background-color 0.3s ease;
 }
 
 .background-image1 {
@@ -103,12 +120,14 @@ nav a {
 .explore-button {
     position: relative;
     z-index: 1;
+    transition: transform 0.3s ease;
 }
 
 .new-year-message {
     font-family: 'Brush Script MT', cursive;
     font-size: 24px;
     margin-top: 20px;
+
 }
 
 .section {
@@ -120,29 +139,7 @@ nav a {
     margin: 50px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-}
 
-.section h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    font-weight: normal;
-    color: black;
-}
-
-.section h3 {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 30px;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    color: #FF5E5E;
-}
-
-.section p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    padding-left: 20px;
 }
 
 .section img {
@@ -156,11 +153,13 @@ nav a {
     background-color: #f44336;
     color: white;
     padding: 40px 20px;
+
 }
 
 .new-year h2, .new-year h3 {
     margin: 0;
     padding: 10px 0;
+
 }
 
 .container1 {
@@ -228,6 +227,11 @@ nav a {
     border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .image-container {
@@ -282,6 +286,7 @@ footer {
     padding: 20px;
     color: white;
     font-size: 14px;
+
 }
 
 .countdown-wrapper {
@@ -292,6 +297,7 @@ footer {
     max-width: 900px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     color: white;
+
 }
 
 .countdown-section {
@@ -299,18 +305,36 @@ footer {
 }
 
 .cta-button {
-    background-color: #000;
+    background-color: #333; /* Черный фон для кнопки */
     color: white;
     font-size: 18px;
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+
 }
 
 .cta-button:hover {
-    background-color: #333;
+    background-color: #ff5e5e;
+    transform: scale(1.05);
+}
+
+.cta-button::before {
+    content: none; /* Убираем красный круг */
+}
+
+
+.cta-button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.cta-button span {
+    position: relative;
+    z-index: 1;
 }
 
 .subheading {
@@ -336,11 +360,12 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease-in-out;
+
 }
 
 .time-box:hover {
     transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .time-box .number {
@@ -375,6 +400,12 @@ footer {
     text-align: center;
     width: 300px;
     height: 70px;
+
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .contact-image {
@@ -396,77 +427,61 @@ footer {
     color: black;
 }
 
-/* Медиа-запросы для адаптивного дизайна */
-
-/* Большие экраны */
-@media (max-width: 1440px) {
-    .cards-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .contact-container {
-        flex-direction: row;
-        gap: 10px;
-    }
+.explore-button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px 0;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Средние экраны (планшеты) */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .image-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cards-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        gap: 20px;
-    }
+.explore-button:hover {
+    background-color: white;
+    color: #ff4646;
+    transform: scale(1.05);
 }
 
-/* Маленькие экраны (мобильные устройства) */
-@media (max-width: 480px) {
-    .image-container {
-        grid-template-columns: 1fr;
-    }
-
-    .filter-buttons button {
-        margin: 5px;
-        padding: 10px;
-        width: 100%;
-    }
-
-    .cards-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-button {
-        width: 100%;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        gap: 20px;
-    }
+.cta-button {
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.cta-button:hover {
+    background-color: white;
+    color: #ff4646;
+    transform: scale(1.05);
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    border: 2px solid white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: white;
+    color: #ff4646;
+    transform: scale(1.1);
+}
+

@@ -5,19 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Christmas Shop</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
   <div class="logo">THE GIFTS</div>
-  <nav>
-    <ul>
-      <li><a href="page2.html">GIFTS</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#best">BEST</a></li>
-      <li><a href="#contacts">CONTACTS</a></li>
-    </ul>
-  </nav>
+  <div class="burger-menu" id="burger-menu">
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="page2.html">GIFTS</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#best">BEST</a></li>
+        <li><a href="#contacts">CONTACTS</a></li>
+      </ul>
+    </nav>
+  </div>
+
 </header>
 
 <section class="hero" id="gifts">
@@ -29,6 +33,17 @@
     <img src="images/bg-ball.png" alt="Christmas Ball" class="background-image1">
   </div>
 </section>
+
+<!-- Slider -->
+<div class="slider">
+  <div class="slides">
+    <div class="slide">Slide 1 Content</div>
+    <div class="slide">Slide 2 Content</div>
+    <div class="slide">Slide 3 Content</div>
+  </div>
+  <button class="arrow left" id="prev">&#8592;</button>
+  <button class="arrow right" id="next">&#8594;</button>
+</div>
 
 <section class="section" id="about">
   <div class="content">
@@ -71,28 +86,28 @@
   <h2>Best Gifts</h2>
   <h3>ESPECIALLY FOR YOU</h3>
   <div class="cards-wrapper">
-    <div class="card">
+    <div class="card" onclick="openModal()">
       <div class="image-container">
         <img src="images/gift-for-work.png" alt="Console.log Guru">
       </div>
       <p class="category for-work">FOR WORK</p>
       <h4>CONSOLE.LOG GURU</h4>
     </div>
-    <div class="card">
+    <div class="card" onclick="openModal()">
       <div class="image-container">
         <img src="images/gift-for-health.png" alt="Hydration Bot">
       </div>
       <p class="category for-health">FOR HEALTH</p>
       <h4>HYDRATION BOT</h4>
     </div>
-    <div class="card">
+    <div class="card" onclick="openModal()">
       <div class="image-container">
         <img src="images/gift-for-work.png" alt="Merge Master">
       </div>
       <p class="category for-work">FOR WORK</p>
       <h4>MERGE MASTER</h4>
     </div>
-    <div class="card">
+    <div class="card" onclick="openModal()">
       <div class="image-container">
         <img src="images/gift-for-harmony.png" alt="Spontaneous Coding Philosopher">
       </div>
@@ -102,6 +117,10 @@
   </div>
 </section>
 
+<!-- Random Gift -->
+<section class="random-gift" id="random-gift"></section>
+
+<!-- Countdown Timer -->
 <div class="countdown-wrapper">
   <div class="countdown-section">
     <h1>READY TO START YOUR <br> JOURNEY TO A BETTER <br> VERSION OF YOURSELF?</h1>
@@ -128,23 +147,16 @@
   </div>
 </div>
 
-<div class="contact-container" id="contacts">
-  <div class="contact-card">
-    <img src="images/01.png.png" alt="Santa Claus" class="contact-image">
-    <h2>+375 (29) 111-22-33</h2>
-    <p>CALL US</p>
-  </div>
-  <div class="contact-card">
-    <img src="images/02.png.png" alt="Christmas Tree" class="contact-image">
-    <h2>MAGIC FOREST</h2>
-    <p>MEET US</p>
-  </div>
-  <div class="contact-card">
-    <img src="images/03.png.png" alt="Dragon" class="contact-image">
-    <h2>GIFTS@MAGIC.COM</h2>
-    <p>WRITE US</p>
+<!-- Modal for Product Details -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <p>Selected Product Details</p>
   </div>
 </div>
+
+<!-- Button Up -->
+<button class="btn-up" id="btn-up">&#8679;</button>
 
 <footer>
   <p>&copy; Copyright 2025, All Rights Reserved</p>
